@@ -68,7 +68,7 @@
 
     <!-- Defines an upgrade installation (x86) -->
     <Command PackageFile="SQLEXPR_x86_ENU.EXE"
-         Arguments="/q /hideconsole /action=Upgrade /instancename=SQLEXPRESS /securitymode=SQL /sapwd=123456 /IAcceptSqlServerLicenseTerms /skiprules=RebootRequiredCheck"
+         Arguments="/q /hideconsole /action=Install /features=SQL /instancename=SQLEXPRESS /enableranu=1 /AddCurrentUserAsSqlAdmin /IAcceptSqlServerLicenseTerms /skiprules=RebootRequiredCheck"
          EstimatedInstalledBytes="225000000"
          EstimatedInstallSeconds="420">
       <InstallConditions>
@@ -108,7 +108,7 @@
 
     <!-- Defines a new installation (amd64) -->
     <Command PackageFile="SQLEXPR_x64_ENU.EXE"
-             Arguments='/q /action=Install /features=SQL /instancename=SQLEXPRESS /securitymode=SQL /sapwd=123456 /IAcceptSqlServerLicenseTerms'
+             Arguments='/q /hideconsole /action=Install /features=SQL /instancename=SQLEXPRESS /enableranu=1 /AddCurrentUserAsSqlAdmin /IAcceptSqlServerLicenseTerms /skiprules=RebootRequiredCheck'
              EstimatedInstalledBytes="225000000"
          EstimatedInstallSeconds="420">
       <InstallConditions>
@@ -148,7 +148,7 @@
 
     <!-- Defines an upgrade installation (amd64) -->
     <Command PackageFile="SQLEXPR_x64_ENU.EXE"
-         Arguments="/q /hideconsole /action=Upgrade /instancename=SQLEXPRESS /securitymode=SQL /sapwd=123456 /IAcceptSqlServerLicenseTerms /skiprules=RebootRequiredCheck"
+         Arguments="/q /hideconsole /action=Install /features=SQL /instancename=SQLEXPRESS /enableranu=1 /AddCurrentUserAsSqlAdmin /IAcceptSqlServerLicenseTerms /skiprules=RebootRequiredCheck"
          EstimatedInstalledBytes="225000000"
          EstimatedInstallSeconds="420">
       <InstallConditions>
